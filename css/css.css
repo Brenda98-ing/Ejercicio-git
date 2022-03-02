@@ -1,0 +1,50 @@
+h1{
+    color:blue,
+}
+
+.menu ul{
+    list-style-type: none;
+    background-color: cadetblue;
+    overflow: hidden; /*Le da independencia a esta propiedad*/
+    margin:0px;
+    padding: 0px;
+}
+
+.menu li{
+    float: left;
+}
+
+.menu li a{
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    background-color: chocolate;
+    color: black;
+}
+
+
+/*Estilos lista ordenada*/
+
+.lista-ordenada ol{
+    list-style: none; /*Quitamos estilos de lista ya que vamos a personalizarlos*/
+    counter-reset: contador; /*Inicia en 0*/
+}
+
+ol li{
+    counter-increment: contador; /*Cada que se agrega Li se incrementara contador*/
+}
+
+ol li::before { /*Se agrego antes la palabra curso*/
+    content: 'curso' counter(contador) ') '; /*Se crea variable contador se concatena con el caracter parentesis para mejor visualizaci+on*/
+    color:blueviolet;
+}
+
+ol li::after { /*Se agrego despues*/
+    content: '.';
+     
+}

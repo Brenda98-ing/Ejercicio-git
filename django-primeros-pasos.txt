@@ -1,0 +1,35 @@
+activate django
+
+Instalar entorno (si ya instalaste anteriormente ya no)
+
+python3 -m venv env #(Crear entorno virtual en proyecto)
+env\Scripts\activate #Ingresar a entorno virtual
+
+Dentro de nuestro entorno virtual Instalamos lo siguiente:
+pip install django
+pip install djangorestframework
+
+Creamos nuestro proyecto
+django-admin startproject profiles_proyecto
+
+Vamos a crear una app (La primera para perfiles)
+django-admin startapp api
+
+Vamos agregar nuestra aplicacion en nuestro proyecto en settings
+especificar bien ruta de app
+   'api.apps', 
+ Vamos a poner accesos de base de datos
+ 
+ Vamos activar cliente de base de datos en mi caso Mysql
+ En admin.py
+ pip install mysqlclient pymysql
+ 
+ Vamos a migrar modelo de base de datos
+ python manage.py  migrate
+  python manage.py makemigrations
+ 
+ 
+
+
+
+
